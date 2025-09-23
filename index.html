@@ -1,125 +1,193 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Melodia - Sua Música, Sua Forma</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
-  <style>
-    body { font-family: 'Poppins', sans-serif; }
-  </style>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Melodia - Sua Música, Sua Forma</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+
+        #commentsContainer>div {
+            border-left-width: 4px;
+            border-left-style: solid;
+        }
+
+        #commentsContainer>div:nth-child(odd) {
+            border-left-color: #00b4d8 !important;
+        }
+
+        #commentsContainer>div:nth-child(even) {
+            border-left-color: #DB2777 !important;
+        }
+    </style>
 </head>
-<body class="bg-gray-50 text-gray-900">
 
-  <!-- Navbar -->
-  <header class="fixed top-0 w-full bg-white/70 backdrop-blur-md shadow-sm z-50">
-    <div class="max-w-6xl mx-auto flex justify-between items-center p-4">
-      <h1 class="text-2xl font-bold text-pink-600">Melodia</h1>
-      <nav class="space-x-6">
-        <a href="#beneficios" class="hover:text-pink-600">Benefícios</a>
-        <a href="#funcionalidades" class="hover:text-pink-600">Funcionalidades</a>
-        <a href="#depoimentos" class="hover:text-pink-600">Depoimentos</a>
-        <a href="#contato" class="hover:text-pink-600">Contato</a>
-      </nav>
-    </div>
-  </header>
-
-  <!-- Hero Section -->
-  <section class="min-h-screen flex flex-col justify-center items-center text-center bg-gradient-to-r from-pink-500 to-purple-600 text-white px-6">
-    <h2 class="text-5xl font-bold mb-4">Melodia: Sua Música, Sua Forma</h2>
-    <p class="mb-6 text-lg">Descubra novos artistas, crie playlists personalizadas e curta qualidade de som superior.</p>
-    <a href="#contato" class="px-8 py-3 bg-white text-pink-600 font-semibold rounded-full shadow-md hover:bg-gray-100 transition">Ouvir Agora</a>
-    <div class="mt-10">
-      <img src="https://via.placeholder.com/400x300" alt="App Melodia" class="rounded-2xl shadow-lg">
-    </div>
-  </section>
-
-  <!-- Benefícios -->
-  <section id="beneficios" class="max-w-6xl mx-auto py-16 px-6 text-center">
-    <h3 class="text-3xl font-bold mb-8">Por que escolher o Melodia?</h3>
-    <div class="grid md:grid-cols-3 gap-8">
-      <div>
-        <i class="fa-solid fa-headphones text-pink-600 text-4xl mb-4"></i>
-        <h4 class="font-semibold">Qualidade de Som Superior</h4>
-      </div>
-      <div>
-        <i class="fa-solid fa-list text-pink-600 text-4xl mb-4"></i>
-        <h4 class="font-semibold">Playlists Personalizadas</h4>
-      </div>
-      <div>
-        <i class="fa-solid fa-guitar text-pink-600 text-4xl mb-4"></i>
-        <h4 class="font-semibold">Descubra Novos Artistas</h4>
-      </div>
-    </div>
-  </section>
-
-  <!-- Funcionalidades -->
-  <section id="funcionalidades" class="bg-gray-100 py-16 px-6">
-    <div class="max-w-6xl mx-auto text-center">
-      <h3 class="text-3xl font-bold mb-10">Funcionalidades</h3>
-      <div class="grid md:grid-cols-3 gap-8">
-        <div class="bg-white p-6 rounded-xl shadow hover:shadow-lg">
-          <i class="fa-solid fa-music text-pink-600 text-3xl mb-4"></i>
-          <h4 class="font-semibold">Biblioteca Completa</h4>
-          <p>Acesse milhões de músicas a qualquer hora.</p>
+<body class="bg-[#f8f9fa] text-gray-900">
+    <header class="fixed top-0 w-full bg-white/70 backdrop-blur-md shadow-sm z-50">
+        <div class="max-w-6xl mx-auto flex justify-between items-center p-4">
+            <h1 class="text-2xl font-bold text-pink-600">Melodia</h1>
+            <nav class="space-x-6">
+                <a href="#beneficios" class="hover:text-pink-600">Benefícios</a>
+                <a href="#funcionalidades" class="hover:text-pink-600">Funcionalidades</a>
+                <a href="#depoimentos" class="hover:text-pink-600">Depoimentos</a>
+                <a href="#contato" class="hover:text-pink-600">Contato</a>
+            </nav>
         </div>
-        <div class="bg-white p-6 rounded-xl shadow hover:shadow-lg">
-          <i class="fa-solid fa-user text-pink-600 text-3xl mb-4"></i>
-          <h4 class="font-semibold">Perfil Personalizado</h4>
-          <p>Monte seu gosto musical único.</p>
+    </header>
+
+    <!-- Hero Section -->
+    <div class="relative ">
+        <section class="min-h-screen flex flex-col justify-center items-center text-center 
+                      bg-gradient-to-r from-[#DB2777] to-[#0077b6] text-white px-6 pb-8 md:pb-12 lg:pb-16">
+
+            <h2 class="text-5xl font-bold mb-4">Melodia: Sua Música, Sua Forma</h2>
+            <p class="mb-6 text-lg">Descubra novos artistas, crie playlists personalizadas e curta qualidade de som
+                superior.</p>
+            <a href="#contato"
+                class="px-8 py-3 bg-white text-[#00b4d8] font-semibold rounded-full shadow-md hover:bg-gray-100 hover:text-pink-600 transition">
+                Ouvir Agora
+            </a>
+        </section>
+        <div class="flex justify-center mt-6 md:mt-8 mb-6" aria-hidden="true">
+            <img src="./assets/Pronto.svg"
+                 alt="Ilustração app Melodia"
+                 class="rounded-lg w-80 h-64 object-contain drop-shadow-sm" />
         </div>
-        <div class="bg-white p-6 rounded-xl shadow hover:shadow-lg">
-          <i class="fa-solid fa-share-nodes text-pink-600 text-3xl mb-4"></i>
-          <h4 class="font-semibold">Compartilhe Músicas</h4>
-          <p>Divida suas playlists com os amigos.</p>
         </div>
+    </div>
+    <!-- Benefícios -->
+    <section id="beneficios" class="mt-30 max-w-6xl mx-auto py-16 px-6 text-center">
+        <h3 class="text-3xl font-bold mb-8 text-[#DB2777]">Por que escolher o Melodia?</h3>
+        <div class="grid md:grid-cols-3 gap-8">
+            <div class="bg-white shadow-md p-6 rounded-xl hover:shadow-lg transition">
+                <i class="fa-solid fa-headphones text-[#DB2777] text-4xl mb-4"></i>
+                <h4 class="font-semibold">Qualidade de Som Superior</h4>
+            </div>
+            <div class="bg-white shadow-md p-6 rounded-xl hover:shadow-lg transition">
+                <i class="fa-solid fa-list text-[#DB2777] text-4xl mb-4"></i>
+                <h4 class="font-semibold">Playlists Personalizadas</h4>
+            </div>
+            <div class="bg-white shadow-md p-6 rounded-xl hover:shadow-lg transition">
+                <i class="fa-solid fa-guitar text-[#DB2777] text-4xl mb-4"></i>
+                <h4 class="font-semibold">Descubra Novos Artistas</h4>
+            </div>
+        </div>
+    </section>
+
+    <!-- Funcionalidades -->
+    <section id="funcionalidades" class="bg-[aaaaaaaaaaaaaa] py-16 px-6">
+        <div class="max-w-6xl mx-auto text-center">
+            <h3 class="text-3xl font-bold mb-10 text-[#00b4d8]">Funcionalidades</h3>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-white p-6 rounded-xl shadow hover:shadow-lg border-t-4 border-[#00b4d8]">
+                    <i class="fa-solid fa-music text-[#00b4d8] text-3xl mb-4"></i>
+                    <h4 class="font-semibold">Biblioteca Completa</h4>
+                    <p>Acesse milhões de músicas a qualquer hora.</p>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow hover:shadow-lg border-t-4 border-[#00b4d8]">
+                    <i class="fa-solid fa-user text-[#00b4d8] text-3xl mb-4"></i>
+                    <h4 class="font-semibold">Perfil Personalizado</h4>
+                    <p>Monte seu gosto musical único.</p>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow hover:shadow-lg border-t-4 border-[#00b4d8]">
+                    <i class="fa-solid fa-share-nodes text-[#00b4d8] text-3xl mb-4"></i>
+                    <h4 class="font-semibold">Compartilhe Músicas</h4>
+                    <p>Divida suas playlists com os amigos.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="depoimentos" class="max-w-6xl mx-auto py-16 px-6 text-center">
+        <h3 class="text-3xl font-bold mb-10 text-[#00b4d8]">O que dizem nossos usuários</h3>
+        <form id="commentForm" class="mb-8 flex flex-col md:flex-row gap-4 justify-center">
+        </form>
+        <div id="commentsContainer" class="grid md:grid-cols-2 gap-8"></div>
+    </section>
+
+    <!-- Contato -->
+    <section id="contato" class="bg-gradient-to-r from-[#DB2777] to-[#0077b6] text-white py-16 px-6">
+        <div class="max-w-4xl mx-auto text-center">
+            <h3 class="text-3xl font-bold mb-6">Receba novidades do Melodia</h3>
+            <form class="flex flex-col md:flex-row gap-4 justify-center">
+                <input type="email" placeholder="Seu e-mail"
+                    class="p-3 rounded-lg text-gray-900 w-full md:w-2/3 focus:ring-2 focus:ring-[#00b4d8]">
+                <button class="px-6 py-3 bg-white text-[#00b4d8] font-semibold rounded-lg shadow hover:bg-gray-100">
+                    Cadastrar
+                </button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Rodapé -->
+    <footer class="bg-[#1a1a1a] text-gray-300 py-6 text-center">
+        <p>© 2025 Melodia. Todos os direitos reservados.</p>
+        <div class="mt-4 flex justify-center space-x-6">
+            <a href="#"><i class="fab fa-instagram hover:text-[#00b4d8]"></i></a>
+            <a href="#"><i class="fab fa-facebook hover:text-[#00b4d8]"></i></a>
+            <a href="#"><i class="fab fa-x-twitter hover:text-[#00b4d8]"></i></a>
+        </div>
+    </footer>
+    <script>
+        const apiURL = "https://jsonplaceholder.typicode.com/comments";
+        const container = document.getElementById("commentsContainer");
+
+        async function loadComments() {
+            try {
+                const response = await fetch(apiURL + "?_limit=4");
+                const comments = await response.json();
+                container.innerHTML = "";
+                comments.forEach(c => renderComment(c));
+            } catch (err) {
+                container.innerHTML = "<p class='text-red-500'>Erro ao carregar comentários.</p>";
+                console.error(err);
+            }
+        }
+
+        document.getElementById("commentForm").addEventListener("submit", async (e) => {
+            e.preventDefault();
+            const name = document.getElementById("name").value;
+            const email = document.getElementById("email").value;
+            const body = document.getElementById("body").value;
+
+            try {
+                const response = await fetch(apiURL, {
+                    method: "POST",
+                    body: JSON.stringify({ name, email, body }),
+                    headers: { "Content-type": "application/json; charset=UTF-8" }
+                });
+                const newComment = await response.json();
+                renderComment(newComment, true);
+                e.target.reset();
+            } catch (err) {
+                alert("Erro ao adicionar comentário.");
+            }
+        });
+        function renderComment(c, prepend = false) {
+            const card = document.createElement("div");
+            card.className = "bg-white p-6 rounded-xl shadow border-l-4 border-[#00b4d8] text-left";
+
+            card.innerHTML = `
+      <p class="italic mb-4" id="body-${c.id}">"${c.body}"</p>
+      <div class="flex items-center gap-3 mb-3">
+        <img src="https://i.pravatar.cc/50?u=${c.email}" class="rounded-full border-2 border-[#00b4d8]" alt="avatar">
+        <span class="font-semibold text-gray-800" id="name-${c.id}">${c.name}</span>
       </div>
-    </div>
-  </section>
-
-  <!-- Depoimentos -->
-  <section id="depoimentos" class="max-w-6xl mx-auto py-16 px-6 text-center">
-    <h3 class="text-3xl font-bold mb-10">O que dizem nossos usuários</h3>
-    <div class="grid md:grid-cols-2 gap-8">
-      <div class="bg-white p-6 rounded-xl shadow">
-        <p class="italic">"O Melodia mudou a forma como eu escuto música. Incrível!"</p>
-        <div class="mt-4 flex items-center justify-center gap-3">
-          <img src="https://via.placeholder.com/50" class="rounded-full">
-          <span>Maria, 22 anos</span>
-        </div>
-      </div>
-      <div class="bg-white p-6 rounded-xl shadow">
-        <p class="italic">"Playlists personalizadas que realmente entendem meu gosto."</p>
-        <div class="mt-4 flex items-center justify-center gap-3">
-          <img src="https://via.placeholder.com/50" class="rounded-full">
-          <span>João, 25 anos</span>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Contato -->
-  <section id="contato" class="bg-gradient-to-r from-purple-600 to-pink-500 text-white py-16 px-6">
-    <div class="max-w-4xl mx-auto text-center">
-      <h3 class="text-3xl font-bold mb-6">Receba novidades do Melodia</h3>
-      <form class="flex flex-col md:flex-row gap-4 justify-center">
-        <input type="email" placeholder="Seu e-mail" class="p-3 rounded-lg text-gray-900 w-full md:w-2/3">
-        <button class="px-6 py-3 bg-white text-pink-600 font-semibold rounded-lg shadow hover:bg-gray-100">Cadastrar</button>
-      </form>
-    </div>
-  </section>
-
-  <!-- Rodapé -->
-  <footer class="bg-gray-900 text-gray-400 py-6 text-center">
-    <p>© 2025 Melodia. Todos os direitos reservados.</p>
-    <div class="mt-4 flex justify-center space-x-6">
-      <a href="#"><i class="fab fa-instagram hover:text-pink-500"></i></a>
-      <a href="#"><i class="fab fa-facebook hover:text-pink-500"></i></a>
-      <a href="#"><i class="fab fa-twitter hover:text-pink-500"></i></a>
-    </div>
-  </footer>
-
+    `;
+            if (prepend) {
+                container.prepend(card);
+            } else {
+                container.appendChild(card);
+            }
+        }
+        loadComments();
+    </script>
 </body>
+
 </html>
